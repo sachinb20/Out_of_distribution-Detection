@@ -1,0 +1,19 @@
+Namespace(batch_size=128, dataroot='../data', dataset='cifar10', imageSize=32, no_cuda=False, num_classes=10, out_dataset='/home/dell/OOD_Detection/deep_Mahalanobis_detector/data/LSUN_resize', outf='../test/19320/', pre_trained_net='/home/dell/OOD_Detection/confidence_estimation/checkpoints/cifar10_vgg13_baseline_epoch_200.pt', seed=1)
+Random Seed:  1
+Load model
+Traceback (most recent call last):
+  File "../src/test_detection.py", line 50, in <module>
+    model.load_state_dict(torch.load(args.pre_trained_net))
+  File "/home/dell/anaconda3/envs/sfmaskrcnn/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1672, in load_state_dict
+    self.__class__.__name__, "\n\t".join(error_msgs)))
+RuntimeError: Error(s) in loading state_dict for VGG:
+	Missing key(s) in state_dict: "features.2.weight", "features.2.bias", "features.5.weight", "features.5.bias", "features.12.weight", "features.12.bias", "features.20.weight", "features.20.bias", "classifier.0.weight", "classifier.0.bias", "classifier.3.weight", "classifier.3.bias", "classifier.6.weight", "classifier.6.bias". 
+	Unexpected key(s) in state_dict: "confidence.weight", "confidence.bias", "features.25.weight", "features.25.bias", "features.25.running_mean", "features.25.running_var", "features.25.num_batches_tracked", "features.28.weight", "features.28.bias", "features.29.weight", "features.29.bias", "features.29.running_mean", "features.29.running_var", "features.29.num_batches_tracked", "features.31.weight", "features.31.bias", "features.32.weight", "features.32.bias", "features.32.running_mean", "features.32.running_var", "features.32.num_batches_tracked", "features.1.weight", "features.1.bias", "features.1.running_mean", "features.1.running_var", "features.1.num_batches_tracked", "features.3.weight", "features.3.bias", "features.4.weight", "features.4.bias", "features.4.running_mean", "features.4.running_var", "features.4.num_batches_tracked", "features.8.weight", "features.8.bias", "features.8.running_mean", "features.8.running_var", "features.8.num_batches_tracked", "features.11.weight", "features.11.bias", "features.11.running_mean", "features.11.running_var", "features.11.num_batches_tracked", "features.14.weight", "features.14.bias", "features.15.running_mean", "features.15.running_var", "features.15.num_batches_tracked", "features.18.weight", "features.18.bias", "features.18.running_mean", "features.18.running_var", "features.18.num_batches_tracked", "features.21.weight", "features.21.bias", "features.22.running_mean", "features.22.running_var", "features.22.num_batches_tracked", "features.24.weight", "features.24.bias", "classifier.weight", "classifier.bias". 
+	size mismatch for features.7.weight: copying a param with shape torch.Size([128, 64, 3, 3]) from checkpoint, the shape in current model is torch.Size([128, 128, 3, 3]).
+	size mismatch for features.10.weight: copying a param with shape torch.Size([128, 128, 3, 3]) from checkpoint, the shape in current model is torch.Size([256, 128, 3, 3]).
+	size mismatch for features.10.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for features.15.weight: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512, 256, 3, 3]).
+	size mismatch for features.15.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+	size mismatch for features.17.weight: copying a param with shape torch.Size([256, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([512, 512, 3, 3]).
+	size mismatch for features.17.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+	size mismatch for features.22.weight: copying a param with shape torch.Size([512]) from checkpoint, the shape in current model is torch.Size([512, 512, 3, 3]).

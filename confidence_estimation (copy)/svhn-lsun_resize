@@ -1,0 +1,8 @@
+Method: confidence
+TPR95 (lower is better):  0.006264857530529168
+Detection error (lower is better):  0.021027658266748617
+Best threshold: 0.4764164124859133
+AUROC (higher is better):  0.9979843538721573
+AUPR_IN (higher is better):  0.999179703823892
+AUPR_OUT (higher is better):  0.9951194442771092
+

@@ -1,0 +1,129 @@
+baseline
+Final Accuracy: 9423/10000 (94.23%)
+TPR95 (lower is better):  0.10677189873417717
+Detection error (lower is better):  0.07205
+Best threshold: 0.40189671902115426
+AUROC (higher is better):  0.9822468550000001
+AUPR_IN (higher is better):  0.9832724280473547
+AUPR_OUT (higher is better):  0.9822230911884343
+
+
+inloss + log_bdryloss
+TPR95 (lower is better):  0.8400666666666666
+Detection error (lower is better):  0.24580000000000002
+Best threshold: 0.28248383095673735
+AUROC (higher is better):  0.8040577050000002
+AUPR_IN (higher is better):  0.8216154679021196
+AUPR_OUT (higher is better):  0.7392227450517674
+
+
+inloss + log_oodloss
+Final Accuracy: 9115/10000 (91.15%)
+TPR95 (lower is better):  0.0025999999999999986
+Detection error (lower is better):  0.00985
+Best threshold: 0.8805253135263393
+AUROC (higher is better):  0.9992633399999999
+AUPR_IN (higher is better):  0.9992013966177382
+AUPR_OUT (higher is better):  0.9993461940165688
+
+inloss + log_ood + 0.5*log_bdry_loss
+TPR95 (lower is better):  0.09058947368421055
+Detection error (lower is better):  0.06555
+Best threshold: 0.01145799334298819
+AUROC (higher is better):  0.9817760900000001
+AUPR_IN (higher is better):  0.9824903227769048
+AUPR_OUT (higher is better):  0.9801071441415942
+
+inloss + log_ood + 0.5quad_bdry_loss (10 epochs)
+Final Accuracy: 9212/10000 (92.12%)
+TPR95 (lower is better):  0.01745035971223039
+Detection error (lower is better):  0.025550000000000003
+Best threshold: 0.18049368092045423
+AUROC (higher is better):  0.9960279150000001
+AUPR_IN (higher is better):  0.9952896958006289
+AUPR_OUT (higher is better):  0.9966504109621098
+
+inloss + log_ood + 0.5quad_bdry_loss (5 epochs)
+Final Accuracy: 9216/10000 (92.16%)
+TPR95 (lower is better):  0.015572049689440629
+Detection error (lower is better):  0.0235
+Best threshold: 0.20713264471920198
+AUROC (higher is better):  0.99629814
+AUPR_IN (higher is better):  0.995733369176105
+AUPR_OUT (higher is better):  0.9968536165883267
+
+
+inloss + ood_loss(y/1-y) + 0.5quad_bdry_loss
+TPR95 (lower is better):  0.019189955022488853
+Detection error (lower is better):  0.026500000000000003
+Best threshold: 0.2044023484175722
+AUROC (higher is better):  0.9950427800000001
+AUPR_IN (higher is better):  0.9933203722549799
+AUPR_OUT (higher is better):  0.9959955137446764
+
+
+inloss + ood_nobdry
+TPR95 (lower is better):  0.0031000000000000016
+Detection error (lower is better):  0.0106
+Best threshold: 0.8498364812014848
+AUROC (higher is better):  0.999166045
+AUPR_IN (higher is better):  0.9991003794235084
+AUPR_OUT (higher is better):  0.999253825281792
+
+train from scratch_all losses (confidence training freq=5 epochs) OOD_test=tinyImagenet_resize
+Final Accuracy: 9262/10000 (92.62%)
+TPR95 (lower is better):  0.25083846153846195
+Detection error (lower is better):  0.10195000000000001
+Best threshold: 0.5378157297921461
+AUROC (higher is better):  0.9635295499999998
+AUPR_IN (higher is better):  0.9691333340885764
+AUPR_OUT (higher is better):  0.9600337986444414
+
+train from scratch_all losses (confidence training freq=5 epochs) OOD_test=LSUN_resize
+Final Accuracy: 9262/10000 (92.62%)
+TPR95 (lower is better):  0.14761563275434217
+Detection error (lower is better):  0.07435
+Best threshold: 0.4387374269865617
+AUROC (higher is better):  0.978702065
+AUPR_IN (higher is better):  0.9819253753240484
+AUPR_OUT (higher is better):  0.976765730632324
+
+
+train from scratch_all losses (confidence training freq=10 epochs) OOD_test=tinyImageNet_resize
+Final Accuracy: 9324/10000 (93.24%)
+TPR95 (lower is better):  0.23876244813277966
+Detection error (lower is better):  0.10375000000000001
+Best threshold: 0.5976161312328209
+AUROC (higher is better):  0.96202834
+AUPR_IN (higher is better):  0.9677769321495873
+AUPR_OUT (higher is better):  0.9564658017226557
+
+train from scratch_all losses (confidence training freq=10 epochs) OOD_test=LSUN_resize
+Final Accuracy: 9324/10000 (93.24%)
+TPR95 (lower is better):  0.15767250000000013
+Detection error (lower is better):  0.08145
+Best threshold: 0.4847896908796708
+AUROC (higher is better):  0.97480824
+AUPR_IN (higher is better):  0.9787290847448138
+AUPR_OUT (higher is better):  0.9714484483467303
+
+
+train from scratch_onlyOOD losses (confidence training freq=10 epochs) OOD_test=tinyImagenet_resize
+Final Accuracy: 9278/10000 (92.78%)
+TPR95 (lower is better):  0.2633414736842102
+Detection error (lower is better):  0.12195
+Best threshold: 0.699758580914561
+AUROC (higher is better):  0.95402353
+AUPR_IN (higher is better):  0.9576970440647713
+AUPR_OUT (higher is better):  0.9541667656869226
+
+train from scratch_onlyOOD losses (confidence training freq=10 epochs) OOD_test=LSUN_resize
+Final Accuracy: 9278/10000 (92.78%)
+TPR95 (lower is better):  0.1600173361522198
+Detection error (lower is better):  0.0902
+Best threshold: 0.5146018787859882
+AUROC (higher is better):  0.9749277099999998
+AUPR_IN (higher is better):  0.9772941593145364
+AUPR_OUT (higher is better):  0.9746667985188184
+
+

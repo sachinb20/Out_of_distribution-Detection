@@ -1,0 +1,23 @@
+/home/dell/anaconda3/envs/sfmaskrcnn/lib/python3.7/site-packages/torch/cuda/__init__.py:88: UserWarning: CUDA initialization: CUDA unknown error - this may be due to an incorrectly set up environment, e.g. changing env variable CUDA_VISIBLE_DEVICES after program start. Setting the available devices to be zero. (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:109.)
+  return torch._C._cuda_getDeviceCount() > 0
+Namespace(batch_size=128, dataroot='../data', dataset='cifar10', imageSize=32, no_cuda=False, num_classes=10, out_dataset='/home/dell/OOD_Detection/deep_Mahalanobis_detector/data/LSUN_resize', outf='../test/21594/', pre_trained_net='/home/dell/OOD_Detection/confidence_estimation/checkpoints/cifar10_vgg13_baseline_epoch_200.pt', seed=1)
+Random Seed:  1
+Load model
+Traceback (most recent call last):
+  File "../src/test_detection.py", line 50, in <module>
+    model.load_state_dict(torch.load(args.pre_trained_net))
+  File "/home/dell/anaconda3/envs/sfmaskrcnn/lib/python3.7/site-packages/torch/serialization.py", line 789, in load
+    return _load(opened_zipfile, map_location, pickle_module, **pickle_load_args)
+  File "/home/dell/anaconda3/envs/sfmaskrcnn/lib/python3.7/site-packages/torch/serialization.py", line 1131, in _load
+    result = unpickler.load()
+  File "/home/dell/anaconda3/envs/sfmaskrcnn/lib/python3.7/site-packages/torch/serialization.py", line 1101, in persistent_load
+    load_tensor(dtype, nbytes, key, _maybe_decode_ascii(location))
+  File "/home/dell/anaconda3/envs/sfmaskrcnn/lib/python3.7/site-packages/torch/serialization.py", line 1083, in load_tensor
+    wrap_storage=restore_location(storage, location),
+  File "/home/dell/anaconda3/envs/sfmaskrcnn/lib/python3.7/site-packages/torch/serialization.py", line 215, in default_restore_location
+    result = fn(storage, location)
+  File "/home/dell/anaconda3/envs/sfmaskrcnn/lib/python3.7/site-packages/torch/serialization.py", line 182, in _cuda_deserialize
+    device = validate_cuda_device(location)
+  File "/home/dell/anaconda3/envs/sfmaskrcnn/lib/python3.7/site-packages/torch/serialization.py", line 166, in validate_cuda_device
+    raise RuntimeError('Attempting to deserialize object on a CUDA '
+RuntimeError: Attempting to deserialize object on a CUDA device but torch.cuda.is_available() is False. If you are running on a CPU-only machine, please use torch.load with map_location=torch.device('cpu') to map your storages to the CPU.
